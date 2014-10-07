@@ -1,0 +1,167 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
+
+// variables
+@bg-color: #F2F2F2;
+@font-family-sans-serif:'Open Sans', sans-serif;
+@border-radius-base:0;
+@border-radius-large:0;
+@border-radius-small:0;
+
+@red:#FF4136;
+@green:#2ECC40;
+@blue:#0074D9;
+@teal: #39CCCC;
+@h1color:#28acac;
+@h2color:#757474;
+
+// Basics of a navbar
+@navbar-default-color:             #fff;
+@navbar-default-bg:                @teal;
+
+// Navbar links
+@navbar-default-link-color:                #fff;
+@navbar-default-link-hover-color:          #fff;
+@navbar-default-link-hover-bg:             lighten(@teal, 10%);
+@navbar-default-link-active-color:         #fff;
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           #ddd;
+@navbar-default-toggle-icon-bar-bg:        #888;
+@navbar-default-toggle-border-color:       #ddd;
+
+// body stuff
+body{
+	background-color: @bg-color;
+}
+
+// navigation
+.navbar-default{
+	border-bottom: 1px dashed #fff;
+	a{
+		font-size: 16px;
+	}
+	.btn-menu{
+		border: none;
+		background-color: #fff;
+		color: @h2color;
+		font-weight: 600;
+		&:hover{
+			background-color: darken(@teal, 15%);
+			color:#fff;
+			.icon-bar{
+				background-color: #fff;
+			}
+		}
+		.title{
+			display: inline-block;
+		}
+		.bars{
+			display: inline-block;
+			margin-top: 3px;
+			margin-left: 5px;
+			float:right;
+		}
+	}
+	.badge{
+		color:@h2color;
+		background-color: #fff;
+		padding: 7px 8px;
+		margin: -1px 0 -5px 2px;
+		font-size: 12px;
+		font-weight: 600;
+		border-radius: 0;
+	}
+}
+a,button,input[type="submit"]{
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+// breadcrumbs
+.breadcrumb{
+	background-color: #fff;
+	a{
+		color: @teal;
+	}
+}
+
+//Content wreaper
+.content-box{
+	background-color: #fff;
+	padding: 20px;
+	h1.page-title{
+		margin-top: 0;
+		color: @h1color;
+		font-size: 32px;
+		font-weight: 300;
+		a{
+			background-color:@teal;
+			border: none;
+			color: #fff;
+			.glyphicon{
+				top: 3px;
+				font-size: 16px;
+			}
+			&:hover{
+				background-color:lighten(@teal, 10%);
+			}
+		}
+	}
+	h2{
+		font-size: 21px;
+		color: @h2color;
+		padding-bottom: 5px;
+		font-weight: 400;
+		text-transform: capitalize;
+	}
+	table.table{
+		thead{
+			tr{
+				th{
+					color: @h2color;
+					font-size: 16px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+	.grocery-list{
+		font-size: 18px;
+		.list-group-item{
+			p{
+				padding: 10px 0;
+				margin: 0;
+			}
+			.glyphicon.glyphicon-ok{
+				color: @h2color;
+			}
+			.glyphicon.glyphicon-trash{
+				color:@red;
+			}
+			.info{
+				margin-right: 15px;
+			}
+			&.done{
+				.list-group-item-success;
+				.glyphicon.glyphicon-ok{
+					color: @green;
+				}
+				p{
+					text-decoration: line-through;
+				}
+			}
+		}
+	}
+}
+
+// footer
+.footer{
+	padding: 20px 0;
+	p{
+		color:#aaa;
+	}
+}

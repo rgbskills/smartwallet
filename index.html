@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="walletApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="assets/bower_components/angularjs/angular.min.js"></script>
+  <script type="text/javascript" src="assets/bower_components/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed btn-menu" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="title">
+            <span>Menu</span>
+          </span>
+          <span class="bars">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>  
+          </span>
+        </button>
+        <a class="navbar-brand" href="index.html">Smart Wallet</a>
+        <p class="navbar-text">
+          <span class="label label-success">You have 12$ in your wallet</span>
+          <span class="label label-success">Date: October-01-2014</span>
+        </p>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="index.html#/in">In</a></li>
+          <li><a href="index.html#/out">Out</a></li>
+          <li><a href="index.html#/grocery-list">Grocery List <span class="badge">5</span></a></li>
+          <li><a href="index.html#/reminders">Reminders</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li class="active">Income</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+<!-- Start content -->
+<div ng-view></div>
+<!-- End content -->
+
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/controllers.js"></script>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="footer text-center">
+        <p>Copyright (c) 2014, SmartWallet - All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
